@@ -1,0 +1,78 @@
+#desktopHero{
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.heroImg {
+    position: absolute;
+    top: -5;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.heroContent{
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.introText{
+    font-size: 3rem;
+    font-weight: 7rem;
+}
+
+.introName {
+    color: gold;
+}
+.introDetails {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+.btn {
+    background-color: gold;
+    border: none;
+    margin: 1rem 0;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    transition: 0.3s ;
+}
+.btnImg {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+
+@media screen and (max-width: 620px) {
+    
+    .hello {
+        font-size: 1.2rem;
+    }
+    .introText{
+        font-size: 2.2rem;
+    }
+    .introDetails {
+        font-size: small;
+    }
+
+}

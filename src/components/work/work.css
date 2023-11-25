@@ -1,0 +1,94 @@
+#works{
+    margin: 0 auto;
+    min-height: calc(100vh - 5rm);
+    width: 100vw;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.workTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+.workDetails{
+    font-weight: 300;
+    font-size: .9rem;
+    max-width: 45rem;
+    margin-bottom: 1rem;
+}
+
+.workImgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 55rem;
+    /* position: relative; */
+}
+.workImg {
+    object-fit: cover;
+    height: 13rem;
+    margin: 0.5rem;
+    transition: .3s;
+}
+.workImg:hover{
+    transition: .3s;
+    transform: translateY(-5px);
+}
+
+
+.moreBtn{
+    border: none;
+    background-color: gold;
+    padding: .5rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin: 3rem 0;
+    cursor: pointer;
+}
+.moreBtn:hover{
+    transition: 0.3s ;
+    transform: translateY(-5px);
+}
+.pagination {
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+.pagination > span {
+    padding: 15px 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.paginationSelected{
+    background-color: gold;
+    color: #000;
+}
+.paginationDisable {
+    opacity: 0;
+}
+
+@media screen and (max-width: 653px) {
+    .workImg{
+        height: 20vw;
+    }
+    .workDetails{
+        max-width: 85vw;
+    }
+    .workImgs {
+        max-width: 22rem;
+    }
+    .workTitle {
+        font-size: 2.2rem;
+    }
+    .workDetails{
+        font-size: .8rem;
+    }
+}

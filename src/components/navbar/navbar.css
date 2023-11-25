@@ -1,0 +1,121 @@
+.navbarContainer{
+    background-color: rgb(30, 30, 30);
+    height: 5rem;
+    width: 100vw;
+    top: 0;
+    z-index: 5;
+    position: sticky;
+}
+.navbar{
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    max-width: 75rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarLogo{
+    width: 4rem;
+    /* height: 3rem; */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.desktopMenuList {
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.desktopMenuList:hover{
+   color: gold;
+   padding-bottom: 0.5rem;
+   border-bottom: 2px solid gold;
+}
+
+.desktopMenuBtn {
+    background-color: gold;
+    display: flex;
+    border: none;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem .5rem;
+    font-weight: 300;
+    cursor: pointer;
+
+   
+}
+
+.active{
+    padding-bottom: 0.5rem;
+    color: gold;
+    border-bottom: 2px solid gold;
+}
+
+.desktopmenuImg {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin: .5rem;
+}
+
+.menu {
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
+    transition: .3s;
+}
+
+.mobileMenu{
+    display: none;
+}
+.listItem{
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .menu {
+        display: flex;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{ 
+        display: none;
+    }
+    .mobileMenu{ 
+        position: absolute;
+        top: 5rem;
+        left: -100%;
+        z-index: 6;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        height: fit-content;
+        min-width: 15rem;
+        background-color: rgb(40, 40, 40);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transition: all .5s ease-in-out;
+    }
+    .activeMenu{
+        left: 0;
+    }
+   
+    .listItem {
+        display: flex;
+        padding: 0.5rem 3rem;
+        margin: .25rem;
+        margin: 0.25rem;
+        background-color: rgb(30, 30, 30);
+        transition: .3s;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+    .listItem:hover{
+        transform: translateY(-2px);
+        color: gold;
+    }
+
+}
